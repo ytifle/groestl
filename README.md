@@ -20,7 +20,7 @@ No special dependencies are needed (Except for brg_types.h).
 
 
 To generate the EMT file for the rijndael test, use the following definitions:
-
+```
 #define TURN_OFF_PRINTING //Desactivar la impresion de datos generales.
 #define TURN_OFF_PRINTING_ROUNDS //Desactivar la impresion de datos por ronda P/Q
 
@@ -37,6 +37,7 @@ To generate the EMT file for the rijndael test, use the following definitions:
 
 #define TEST_RIJNDAEL_PQ_BOXES
 //#define TEST_GROSTL_ENCODING
+```
 
 Then, save the output using i.e.: ./Groestl > groestl_rijndael_1024.en
 Open the output file in EMT, and press Ctrl+R (Run the worksheet).
@@ -46,6 +47,7 @@ When it finishes, export it to LaTeX or HTML.
 
 To generate the full rijndael data (excluding subrounds), use this definitions:
 
+```
 //#define TURN_OFF_PRINTING //Desactivar la impresion de datos generales.
 #define TURN_OFF_PRINTING_ROUNDS //Desactivar la impresion de datos por ronda P/Q
 
@@ -62,6 +64,7 @@ To generate the full rijndael data (excluding subrounds), use this definitions:
 
 #define TEST_RIJNDAEL_PQ_BOXES
 //#define TEST_GROSTL_ENCODING
+```
 
 Subrounds are exluded, because the generated file is BIG (>50MB).
 To save it as html, you will need aha (https://github.com/theZiz/aha)
@@ -71,6 +74,7 @@ To save it as html, you will need aha (https://github.com/theZiz/aha)
 
 To generate all the rounds and subrounds used to hash data, use this ones:
 
+```
 //#define TURN_OFF_PRINTING //Desactivar la impresion de datos generales.
 //#define TURN_OFF_PRINTING_ROUNDS //Desactivar la impresion de datos por ronda P/Q
 
@@ -87,12 +91,14 @@ To generate all the rounds and subrounds used to hash data, use this ones:
 
 //#define TEST_RIJNDAEL_PQ_BOXES
 #define TEST_GROSTL_ENCODING
+```
 
 Save it to html with aha (https://github.com/theZiz/aha), or just run it.
 ./Groestl | aha --black > groestl_test_1024.html
 
 
 In a similar fashion, to obtain the EMT file, use this ones:
+```
 #define TURN_OFF_PRINTING //Desactivar la impresion de datos generales.
 #define TURN_OFF_PRINTING_ROUNDS //Desactivar la impresion de datos por ronda P/Q
 
@@ -109,6 +115,7 @@ In a similar fashion, to obtain the EMT file, use this ones:
 
 //#define TEST_RIJNDAEL_PQ_BOXES
 #define TEST_GROSTL_ENCODING
+```
 
 Then, save the output using i.e.: ./Groestl > groestl_1024.en
 Open the output file in EMT, and press Ctrl+R (Run the worksheet).
