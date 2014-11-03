@@ -5,17 +5,17 @@ Implementacion para el calculo del efecto avalancha en Groestl
 
 
 File list:
-
+```
 *.en files      - EMT Files
 *.html files    - Console output of generated tests
 Groestl-intermediate.c / Groestl-intermediate.h     - Implementation
 brg_types.h     - Dependencies
-
+```
 
 
 
 To compile, just invoke gcc in this fashion:
-gcc -o Groestl Groestl-intermediate.c
+```gcc -o Groestl Groestl-intermediate.c```
 No special dependencies are needed (Except for brg_types.h).
 
 
@@ -39,7 +39,7 @@ To generate the EMT file for the rijndael test, use the following definitions:
 //#define TEST_GROSTL_ENCODING
 ```
 
-Then, save the output using i.e.: ./Groestl > groestl_rijndael_1024.en
+Then, save the output using i.e.: ```./Groestl > groestl_rijndael_1024.en```
 Open the output file in EMT, and press Ctrl+R (Run the worksheet).
 When it finishes, export it to LaTeX or HTML.
 
@@ -68,7 +68,7 @@ To generate the full rijndael data (excluding subrounds), use this definitions:
 
 Subrounds are exluded, because the generated file is BIG (>50MB).
 To save it as html, you will need aha (https://github.com/theZiz/aha)
-./Groestl | aha --black > rijndael_test_1024.html
+```./Groestl | aha --black > rijndael_test_1024.html```
 
 
 
@@ -94,7 +94,7 @@ To generate all the rounds and subrounds used to hash data, use this ones:
 ```
 
 Save it to html with aha (https://github.com/theZiz/aha), or just run it.
-./Groestl | aha --black > groestl_test_1024.html
+```./Groestl | aha --black > groestl_test_1024.html```
 
 
 In a similar fashion, to obtain the EMT file, use this ones:
@@ -117,7 +117,7 @@ In a similar fashion, to obtain the EMT file, use this ones:
 #define TEST_GROSTL_ENCODING
 ```
 
-Then, save the output using i.e.: ./Groestl > groestl_1024.en
+Then, save the output using i.e.: ```./Groestl > groestl_1024.en```
 Open the output file in EMT, and press Ctrl+R (Run the worksheet).
 When it finishes, export it to LaTeX or HTML.
 
